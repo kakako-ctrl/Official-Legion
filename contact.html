@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Courier New', monospace;
+            color: #fff;
+            background: black;
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin: 20px 0;
+            color: #ff00ff;
+        }
+
+        /* Animated Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            animation: stars 60s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes stars {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 1000px 1000px;
+            }
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .contact-info {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-info:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-text {
+            font-size: 1.2em;
+            color: #cccccc;
+        }
+
+        .discord-link {
+            font-size: 1.5em;
+            color: #00ffff;
+            text-decoration: none;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .discord-link:hover {
+            text-decoration: underline;
+        }
+
+        .return-button {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #ff00ff;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .return-button:hover {
+            background-color: #cc00cc;
+        }
+
+        @media (max-width: 600px) {
+            .contact-info {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Contact Us</h1>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <p class="contact-text">Need assistance or have ideas for the website?</p>
+            <p class="contact-text">Reach out to us through our Discord:</p>
+            <a href="https://guns.lol/fmbz" class="guns.lol-link" target="_blank">https.honor</a>
+        </div>
+    </div>
+
+    <!-- Return Button -->
+    <button class="return-button" onclick="window.location.href='index.html';">Back to Main Page</button>
+
+</body>
+</html>

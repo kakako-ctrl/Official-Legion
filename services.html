@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Courier New', monospace;
+            color: #fff;
+            background: black;
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin: 20px 0;
+            color: #ff00ff;
+        }
+
+        /* Animated Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            animation: stars 60s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes stars {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 1000px 1000px;
+            }
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .service-card {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .service-title {
+            font-size: 1.5em;
+            color: #00ffff;
+        }
+
+        .service-description {
+            font-size: 1em;
+            color: #cccccc;
+            margin-top: 10px;
+        }
+
+        .service-icon {
+            font-size: 4em;
+            color: #ff00ff;
+            margin-bottom: 10px;
+        }
+
+        .return-button {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #ff00ff;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .return-button:hover {
+            background-color: #cc00cc;
+        }
+
+        @media (max-width: 600px) {
+            .services-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Our Services</h1>
+
+    <div class="services-container">
+        <div class="service-card">
+            <div class="service-icon">💻</div>
+            <h2 class="service-title">Web Development</h2>
+            <p class="service-description">Create responsive, dynamic, and modern websites tailored to your needs.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🔒</div>
+            <h2 class="service-title">Cybersecurity</h2>
+            <p class="service-description">Ensure the security and protection of your digital assets with our expert services.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">💥</div>
+            <h2 class="service-title">Nuking Servers</h2>
+            <p class="service-description">Nuking servers that violate Discord’s Terms of Service to maintain a safe environment.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🔒</div>
+            <h2 class="service-title">Protection</h2>
+            <p class="service-description">Offering protection and safeguarding services for your servers against threats and vulnerabilities.</p>
+        </div>
+    </div>
+
+    <!-- Music Playback with Fallback -->
+    <audio id="music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        <p>Click <a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" target="_blank">here</a> to download the music.</p>
+    </audio>
+
+    <!-- Return Button -->
+    <button class="return-button" onclick="window.location.href='index.html';">Back to Main Page</button>
+
+</body>
+</html>
