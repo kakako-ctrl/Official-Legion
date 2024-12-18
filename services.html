@@ -10,7 +10,7 @@
             font-family: 'Courier New', monospace;
             color: #fff;
             background: black;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         h1 {
@@ -48,6 +48,7 @@
             justify-content: center;
             gap: 20px;
             padding: 20px;
+            margin-bottom: 50px; /* To avoid overlapping with the button */
         }
 
         .service-card {
@@ -108,35 +109,65 @@
                 width: 90%;
             }
         }
+
+        /* Ensure scrollability */
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            scrollbar-width: thin; /* Firefox */
+        }
+
+        .content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .content::-webkit-scrollbar-thumb {
+            background: #ff00ff;
+            border-radius: 4px;
+        }
+
+        .content::-webkit-scrollbar-thumb:hover {
+            background: #cc00cc;
+        }
     </style>
 </head>
 <body>
+    <div class="content">
+        <h1>Our Services</h1>
 
-    <h1>Our Services</h1>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h2 class="service-title">Web Development</h2>
+                <p class="service-description">Create responsive, dynamic, and modern websites tailored to your needs.</p>
+            </div>
 
-    <div class="services-container">
-        <div class="service-card">
-            <div class="service-icon">💻</div>
-            <h2 class="service-title">Web Development</h2>
-            <p class="service-description">Create responsive, dynamic, and modern websites tailored to your needs.</p>
-        </div>
+            <div class="service-card">
+                <div class="service-icon">🔒</div>
+                <h2 class="service-title">Cybersecurity</h2>
+                <p class="service-description">Ensure the security and protection of your digital assets with our expert services.</p>
+            </div>
 
-        <div class="service-card">
-            <div class="service-icon">🔒</div>
-            <h2 class="service-title">Cybersecurity</h2>
-            <p class="service-description">Ensure the security and protection of your digital assets with our expert services.</p>
-        </div>
+            <div class="service-card">
+                <div class="service-icon">💥</div>
+                <h2 class="service-title">Nuking Servers</h2>
+                <p class="service-description">Nuking servers that violate Discord’s Terms of Service to maintain a safe environment.</p>
+            </div>
 
-        <div class="service-card">
-            <div class="service-icon">💥</div>
-            <h2 class="service-title">Nuking Servers</h2>
-            <p class="service-description">Nuking servers that violate Discord’s Terms of Service to maintain a safe environment.</p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">🔒</div>
-            <h2 class="service-title">Protection</h2>
-            <p class="service-description">Offering protection and safeguarding services for your servers against threats and vulnerabilities.</p>
+            <div class="service-card">
+                <div class="service-icon">🔒</div>
+                <h2 class="service-title">Protection</h2>
+                <p class="service-description">Offering protection and safeguarding services for your servers against threats and vulnerabilities.</p>
+            </div>
         </div>
     </div>
 
@@ -149,6 +180,5 @@
 
     <!-- Return Button -->
     <button class="return-button" onclick="window.location.href='index.html';">Back to Main Page</button>
-
 </body>
 </html>
