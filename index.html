@@ -56,10 +56,11 @@
         .ascii-art {
             text-align: center;
             white-space: pre;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 1.2;
             color: #ff00ff;
             margin: 20px 0;
+            text-shadow: 0 0 5px #ff00ff;
         }
 
         /* Links */
@@ -118,6 +119,7 @@
     </style>
 </head>
 <body>
+
     <!-- Hidden Calm Music -->
     <audio id="music" autoplay loop>
         <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
@@ -125,43 +127,25 @@
 
     <h1>Welcome to the Golden Legion</h1>
 
-    <!-- ASCII Art Banner -->
+    <!-- Corrected ASCII Art -->
     <div class="ascii-art">
-._____  ._______  .___    .______  ._______.______       .___    ._______._____  .___ ._______  .______
-:_ ___\ : .___  \ |   |   :_ _   \ : .____/:      \      |   |   : .____/:_ ___\ : __|: .___  \ :      \
-|   |___| :   |  ||   |   |   |   || : _/\ |       |     |   |   | : _/\ |   |___| : || :   |  ||       |
-|   /  ||     :  ||   |/\ | . |   ||   /  \|   |   |     |   |/\ |   /  \|   /  ||   ||     :  ||   |   |
-|. __  | \_. ___/ |   /  \|. ____/ |_.: __/|___|   |     |   /  \|_.: __/|. __  ||   | \_. ___/ |___|   |
- :/ |. |   :/     |______/ :/         :/       |___|     |______/   :/    :/ |. ||___|   :/         |___|
- :   :/    :               :                                              :   :/         :
-     :                                                                        :
-    </div>
-
-    <!-- Interactive Hover Text -->
-    <div class="hover-text">
-        <span>J</span>
-        <span>O</span>
-        <span>I</span>
-        <span>N</span>
-        <span> </span>
-        <span>T</span>
-        <span>H</span>
-        <span>E</span>
-        <span> </span>
-        <span>S</span>
-        <span>E</span>
-        <span>R</span>
-        <span>V</span>
-        <span>E</span>
-        <span>R</span>
-        <span>!</span>
+      ._____  ._______  .___    .______  ._______.______       .___    ._______._____  .___ ._______  .______
+     :_ ___\ : .___  \ |   |   :_ _   \ : .____/:      \      |   |   : .____/:_ ___\ : __|: .___  \ :      \
+    |   |___| :   |  ||   |   |   |   || : _/\ |       |     |   |   | : _/\ |   |___| : || :   |  ||       |
+    |   /  ||     :  ||   |/\ | . |   ||   /  \|   |   |     |   |/\ |   /  \|   /  ||   ||     :  ||   |   |
+    |. __  | \_. ___/ |   /  \|. ____/ |_.: __/|___|   |     |   /  \|_.: __/|. __  ||   | \_. ___/ |___|   |
+    :/ |. |   :/     |______/ :/         :/       |___|     |______/   :/    :/ |. ||___|   :/         |___|
+    :   :/    :               :                                              :   :/         :
+         :
     </div>
 
     <!-- Links Section -->
     <section class="links">
-        <h2>Join Us</h2>
+        <h2>Quick Links</h2>
         <a href="https://discord.gg/uQAm6jDM" target="_blank">Join Our Discord Server</a>
         <a href="https://kakako-ctrl.github.io/HiddenLegion/" target="_blank">HiddenWeb (Beta)</a>
+        <a href="services.html">Our Services</a>
+        <a href="contact.html">Contact Us</a>
     </section>
 
     <!-- About Us Section -->
@@ -174,11 +158,13 @@
     <section class="section staff">
         <h2>Staff</h2>
         <p><strong>Owner (for the server):</strong> [Abdh] - Responsible for overseeing the server and ensuring all rules are followed.</p>
-        <p><strong>Moderator:</strong> [Nollen] - Ensures smooth day-to-day operations and helps maintain server integrity.</p>
-        <p><strong>Support Team:</strong> [Karma] - Assists members with queries and issues, ensuring a positive experience.</p>
-        <p><strong>Owner of the website:</strong> [KING/F] - Just an coffee addict who happens to do shit for the server.</p>
+        <p><strong>Co-owner:</strong> [Nollen] - Ensures smooth day-to-day operations and helps maintain server integrity.</p>
+        <p><strong>Support Team:</strong> [Arnold] - Assists members with queries and issues, ensuring a positive experience.</p>
+        <p><strong>Owner of the website:</strong> [KING/F] - Just a coffee addict who happens to do stuff for the server.</p>
+        <p><strong>Admin Team:</strong> [KING/F, Nollen, Warrior, Arnold, Narrator, Abdh] These are the most trusted people in the server.</p>
     </section>
 
+    <!-- Background Music Control -->
     <script>
         // Play music when the user clicks anywhere
         document.addEventListener('click', () => {
@@ -186,5 +172,6 @@
             music.play();
         }, { once: true });
     </script>
+
 </body>
 </html>
