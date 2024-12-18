@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Legion</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            font-family: 'Courier New', monospace;
+            color: #fff;
+            background: black;
+            overflow: hidden;
+        }
+
+        /* Animated Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            animation: stars 60s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes stars {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 1000px 1000px;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin: 20px 0;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff;
+            }
+            to {
+                text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+            }
+        }
+
+        /* ASCII Art */
+        .ascii-art {
+            text-align: center;
+            white-space: pre;
+            font-size: 12px;
+            line-height: 1.2;
+            color: #ff00ff;
+            margin: 20px 0;
+        }
+
+        /* Links */
+        .links {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .links a {
+            color: #00ffff;
+            text-decoration: none;
+            font-size: 1.2em;
+            display: inline-block;
+            margin: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        .links a:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 5px #ff00ff;
+            transform: scale(1.1);
+        }
+
+        /* Hover Effect Text */
+        .hover-text {
+            text-align: center;
+            font-size: 1.5em;
+            margin: 40px 0;
+        }
+        .hover-text span {
+            display: inline-block;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .hover-text span:hover {
+            transform: rotate(10deg) scale(1.2);
+            color: #ff00ff;
+        }
+
+        /* Hidden Music Player */
+        #music {
+            display: none;
+        }
+
+        /* Section Styling */
+        .section {
+            margin: 40px 0;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2em;
+            color: #ff00ff;
+        }
+        .section p {
+            font-size: 1.2em;
+            color: #00ffff;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hidden Calm Music -->
+    <audio id="music" autoplay loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <h1>Welcome to the Golden Legion</h1>
+
+    <!-- ASCII Art Banner -->
+    <div class="ascii-art">
+._____  ._______  .___    .______  ._______.______       .___    ._______._____  .___ ._______  .______
+:_ ___\ : .___  \ |   |   :_ _   \ : .____/:      \      |   |   : .____/:_ ___\ : __|: .___  \ :      \
+|   |___| :   |  ||   |   |   |   || : _/\ |       |     |   |   | : _/\ |   |___| : || :   |  ||       |
+|   /  ||     :  ||   |/\ | . |   ||   /  \|   |   |     |   |/\ |   /  \|   /  ||   ||     :  ||   |   |
+|. __  | \_. ___/ |   /  \|. ____/ |_.: __/|___|   |     |   /  \|_.: __/|. __  ||   | \_. ___/ |___|   |
+ :/ |. |   :/     |______/ :/         :/       |___|     |______/   :/    :/ |. ||___|   :/         |___|
+ :   :/    :               :                                              :   :/         :
+     :                                                                        :
+    </div>
+
+    <!-- Interactive Hover Text -->
+    <div class="hover-text">
+        <span>J</span>
+        <span>O</span>
+        <span>I</span>
+        <span>N</span>
+        <span> </span>
+        <span>T</span>
+        <span>H</span>
+        <span>E</span>
+        <span> </span>
+        <span>S</span>
+        <span>E</span>
+        <span>R</span>
+        <span>V</span>
+        <span>E</span>
+        <span>R</span>
+        <span>!</span>
+    </div>
+
+    <!-- Links Section -->
+    <section class="links">
+        <h2>Join Us</h2>
+        <a href="https://discord.gg/uQAm6jDM" target="_blank">Join Our Discord Server</a>
+        <a href="https://kakako-ctrl.github.io/HiddenLegion/" target="_blank">LogginBins (Beta)</a>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="section about-us">
+        <h2>About Us</h2>
+        <p>The Golden Legion is a community built on trust, friendship, and collaboration. We aim to create a space where individuals can come together to share ideas, projects, and experiences. Our staff is dedicated to ensuring a safe and welcoming environment for everyone.</p>
+    </section>
+
+    <!-- Staff Section -->
+    <section class="section staff">
+        <h2>Staff</h2>
+        <p><strong>Owner (for the server):</strong> [Abdh] - Responsible for overseeing the server and ensuring all rules are followed.</p>
+        <p><strong>Moderator:</strong> [Nollen] - Ensures smooth day-to-day operations and helps maintain server integrity.</p>
+        <p><strong>Support Team:</strong> [Karma] - Assists members with queries and issues, ensuring a positive experience.</p>
+        <p><strong>Owner of the website:</strong> [KING/F] - Just an coffee addict who happens to do shit for the server.</p>
+    </section>
+
+    <script>
+        // Play music when the user clicks anywhere
+        document.addEventListener('click', () => {
+            const music = document.getElementById('music');
+            music.play();
+        }, { once: true });
+    </script>
+</body>
+</html>
