@@ -11,7 +11,7 @@
             font-family: 'Courier New', monospace;
             color: #fff;
             background: black;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         /* Animated Background */
@@ -39,7 +39,7 @@
         h1 {
             text-align: center;
             font-size: 2.5em;
-            margin: 20px 0;
+            margin: 20px 10px;
             animation: glow 1.5s infinite alternate;
         }
 
@@ -55,66 +55,99 @@
         /* ASCII Art */
         .ascii-art {
             text-align: center;
-            white-space: pre;
-            font-size: 14px;
+            white-space: pre-wrap;
+            font-size: 12px;
             line-height: 1.2;
             color: #ff00ff;
-            margin: 20px 0;
+            margin: 10px 5px;
             text-shadow: 0 0 5px #ff00ff;
         }
 
         /* Links */
         .links {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 20px;
         }
         .links a {
             color: #00ffff;
             text-decoration: none;
-            font-size: 1.2em;
-            display: inline-block;
-            margin: 10px;
+            font-size: 1em;
+            display: block;
+            margin: 8px 0;
             transition: all 0.3s ease-in-out;
         }
         .links a:hover {
             color: #ff00ff;
             text-shadow: 0 0 5px #ff00ff;
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
-        /* Hover Effect Text */
-        .hover-text {
+        /* Sections */
+        .section {
+            margin: 20px auto;
             text-align: center;
-            font-size: 1.5em;
-            margin: 40px 0;
+            max-width: 90%;
         }
-        .hover-text span {
-            display: inline-block;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-        .hover-text span:hover {
-            transform: rotate(10deg) scale(1.2);
+        .section h2 {
+            font-size: 1.8em;
             color: #ff00ff;
+        }
+        .section p {
+            font-size: 1em;
+            color: #00ffff;
+            margin: 10px 5px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .ascii-art {
+                font-size: 9px;
+                line-height: 1;
+            }
+
+            .links a {
+                font-size: 0.9em;
+            }
+
+            .section h2 {
+                font-size: 1.4em;
+            }
+
+            .section p {
+                font-size: 0.9em;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .ascii-art {
+                font-size: 8px;
+                margin: 5px;
+            }
+
+            .links a {
+                font-size: 0.8em;
+            }
+
+            .section h2 {
+                font-size: 1.2em;
+            }
+
+            .section p {
+                font-size: 0.8em;
+            }
         }
 
         /* Hidden Music Player */
         #music {
             display: none;
-        }
-
-        /* Section Styling */
-        .section {
-            margin: 40px 0;
-            text-align: center;
-        }
-        .section h2 {
-            font-size: 2em;
-            color: #ff00ff;
-        }
-        .section p {
-            font-size: 1.2em;
-            color: #00ffff;
-            margin: 10px 0;
         }
     </style>
 </head>
@@ -143,7 +176,6 @@
     <section class="links">
         <h2>Quick Links</h2>
         <a href="https://discord.gg/uQAm6jDM" target="_blank">Join Our Discord Server</a>
-        <a href="https://kakako-ctrl.github.io/HiddenLegion/" target="_blank">HiddenWeb (Beta)</a>
         <a href="services.html">Our Services</a>
         <a href="contact.html">Contact Us</a>
     </section>
@@ -151,17 +183,17 @@
     <!-- About Us Section -->
     <section class="section about-us">
         <h2>About Us</h2>
-        <p>The Golden Legion is a community built on trust, friendship, and collaboration. We aim to create a space where individuals can come together to share ideas, projects, and experiences. Our staff is dedicated to ensuring a safe and welcoming environment for everyone.</p>
+        <p>The Golden Legion is a community built on trust, friendship, and collaboration. We aim to create a space where individuals can come together to share ideas, projects, and experiences.</p>
     </section>
 
     <!-- Staff Section -->
     <section class="section staff">
         <h2>Staff</h2>
-        <p><strong>Owner (for the server):</strong> [Abdh] - Responsible for overseeing the server and ensuring all rules are followed.</p>
-        <p><strong>Co-owner:</strong> [Nollen] - Ensures smooth day-to-day operations and helps maintain server integrity.</p>
-        <p><strong>Support Team:</strong> [Arnold] - Assists members with queries and issues, ensuring a positive experience.</p>
-        <p><strong>Owner of the website:</strong> [KING/F] - Just a coffee addict who happens to do stuff for the server.</p>
-        <p><strong>Admin Team:</strong> [KING/F, Nollen, Warrior, Arnold, Narrator, Abdh] These are the most trusted people in the server.</p>
+        <p><strong>Owner (for the server):</strong> [Abdh]</p>
+        <p><strong>Co-owner:</strong> [Nollen]</p>
+        <p><strong>Support Team:</strong> [Arnold]</p>
+        <p><strong>Owner of the website:</strong> [KING/F]</p>
+        <p><strong>Admin Team:</strong> [KING/F, Nollen, Warrior, Arnold, Narrator, Abdh]</p>
     </section>
 
     <!-- Background Music Control -->
