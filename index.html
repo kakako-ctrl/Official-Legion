@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Golden Legion</title>
     <style>
-        /* General Styling */
         body {
             margin: 0;
             font-family: 'Courier New', monospace;
@@ -14,7 +13,6 @@
             overflow-x: hidden;
         }
 
-        /* Animated Background */
         body::before {
             content: '';
             position: fixed;
@@ -52,37 +50,53 @@
             }
         }
 
-        /* ASCII Art */
+        .music-prompt {
+            text-align: center;
+            font-size: 1.2em;
+            color: #FFFFFF;
+            text-shadow: 0 0 10px #ff00ff;
+            margin-top: -10px;
+            animation: fade-in 2s ease-out;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
         .ascii-art {
             text-align: center;
             white-space: pre-wrap;
             font-size: 12px;
             line-height: 1.2;
-            color: #ff00ff;
-            margin: 10px 5px;
+            color: #FFFFFF;
+            margin: 20px 5px;
             text-shadow: 0 0 5px #ff00ff;
         }
 
-        /* Links */
         .links {
             text-align: center;
             margin-top: 20px;
         }
         .links a {
-            color: #00ffff;
+            color: #FFFFFF;
             text-decoration: none;
-            font-size: 1em;
+            font-size: 1.2em;
+            font-weight: bold;
             display: block;
-            margin: 8px 0;
+            margin: 12px 0;
             transition: all 0.3s ease-in-out;
         }
         .links a:hover {
-            color: #ff00ff;
-            text-shadow: 0 0 5px #ff00ff;
-            transform: scale(1.05);
+            color: #FFFFFF;
+            text-shadow: 0 0 10px #ff00ff;
+            transform: scale(1.1);
         }
 
-        /* Sections */
         .section {
             margin: 20px auto;
             text-align: center;
@@ -90,15 +104,14 @@
         }
         .section h2 {
             font-size: 1.8em;
-            color: #ff00ff;
+            color: #FFFFFF;
         }
         .section p {
             font-size: 1em;
-            color: #00ffff;
+            color: #FFFFFF;
             margin: 10px 5px;
         }
 
-        /* Responsive Design */
         @media screen and (max-width: 768px) {
             h1 {
                 font-size: 2em;
@@ -110,7 +123,7 @@
             }
 
             .links a {
-                font-size: 0.9em;
+                font-size: 1em;
             }
 
             .section h2 {
@@ -133,7 +146,7 @@
             }
 
             .links a {
-                font-size: 0.8em;
+                font-size: 0.9em;
             }
 
             .section h2 {
@@ -145,34 +158,27 @@
             }
         }
 
-        /* Hidden Music Player */
         #music {
             display: none;
         }
     </style>
 </head>
 <body>
-
-    <!-- Hidden Calm Music -->
     <audio id="music" autoplay loop>
         <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
     </audio>
 
     <h1>Welcome to the Golden Legion</h1>
+    <div class="music-prompt" id="music-prompt">Click anywhere for music</div>
 
-    <!-- Corrected ASCII Art -->
     <div class="ascii-art">
-      ._____  ._______  .___    .______  ._______.______       .___    ._______._____  .___ ._______  .______
-     :_ ___\ : .___  \ |   |   :_ _   \ : .____/:      \      |   |   : .____/:_ ___\ : __|: .___  \ :      \
-    |   |___| :   |  ||   |   |   |   || : _/\ |       |     |   |   | : _/\ |   |___| : || :   |  ||       |
-    |   /  ||     :  ||   |/\ | . |   ||   /  \|   |   |     |   |/\ |   /  \|   /  ||   ||     :  ||   |   |
-    |. __  | \_. ___/ |   /  \|. ____/ |_.: __/|___|   |     |   /  \|_.: __/|. __  ||   | \_. ___/ |___|   |
-    :/ |. |   :/     |______/ :/         :/       |___|     |______/   :/    :/ |. ||___|   :/         |___|
-    :   :/    :               :                                              :   :/         :
-         :
+██      ███████  ██████  ██  ██████  ███    ██
+██      ██      ██       ██ ██    ██ ████   ██
+██      █████   ██   ███ ██ ██    ██ ██ ██  ██
+██      ██      ██    ██ ██ ██    ██ ██  ██ ██
+███████ ███████  ██████  ██  ██████  ██   ████
     </div>
 
-    <!-- Links Section -->
     <section class="links">
         <h2>Quick Links</h2>
         <a href="https://discord.gg/uQAm6jDM" target="_blank">Join Our Discord Server</a>
@@ -180,13 +186,11 @@
         <a href="contact.html">Contact Us</a>
     </section>
 
-    <!-- About Us Section -->
     <section class="section about-us">
         <h2>About Us</h2>
         <p>The Golden Legion is a community built on trust, friendship, and collaboration. We aim to create a space where individuals can come together to share ideas, projects, and experiences.</p>
     </section>
 
-    <!-- Staff Section -->
     <section class="section staff">
         <h2>Staff</h2>
         <p><strong>Owner (for the server):</strong> [Abdh]</p>
@@ -196,14 +200,13 @@
         <p><strong>Admin Team:</strong> [KING/F, Nollen, Warrior, Arnold, Narrator, Abdh]</p>
     </section>
 
-    <!-- Background Music Control -->
     <script>
-        // Play music when the user clicks anywhere
         document.addEventListener('click', () => {
             const music = document.getElementById('music');
+            const musicPrompt = document.getElementById('music-prompt');
             music.play();
+            musicPrompt.style.display = 'none';
         }, { once: true });
     </script>
-
 </body>
 </html>
